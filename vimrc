@@ -26,15 +26,12 @@ map <Leader> <Plug>(easymotion-prefix)
 Plug 'pangloss/vim-javascript'
 let g:javascript_plugin_jsdoc = 1
 
-Plug 'frazrepo/vim-rainbow'
-let g:rainbow_active = 1
-
 Plug 'morhetz/gruvbox'
 set termguicolors
 let g:gruvbox_italic=1
 autocmd vimenter * ++nested colorscheme gruvbox
 " Set dark mode
-set bg=dark
+" set bg=dark
 
 call plug#end()
 
