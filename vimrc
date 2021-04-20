@@ -27,11 +27,20 @@ Plug 'pangloss/vim-javascript'
 let g:javascript_plugin_jsdoc = 1
 
 Plug 'morhetz/gruvbox'
-set termguicolors
+" set termguicolors
 let g:gruvbox_italic=1
 autocmd vimenter * ++nested colorscheme gruvbox
 " Set dark mode
-" set bg=dark
+set bg=dark
+
+if (empty($TMUX))
+  if (has("nvim"))
+    let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+  endif
+  if (has("termguicolors"))
+    set termguicolors
+  endif
+endif
 
 call plug#end()
 

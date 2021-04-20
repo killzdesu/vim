@@ -13,3 +13,6 @@ Run vim then
 ```
 :PlugInstall
 ```
+
+If there is any problem with colorscheme
+try disabling ```colorscheme gruvbox``` or ```set termguicolors```
