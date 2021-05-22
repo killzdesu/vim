@@ -42,6 +42,8 @@ Plug 'posva/vim-vue'
 let g:vue_pre_processors = ['scss']
 Plug 'leafOfTree/vim-vue-plugin'
 Plug 'cakebaker/scss-syntax.vim'
+Plug 'ap/vim-css-color'
+Plug 'hail2u/vim-css3-syntax'
 Plug 'pangloss/vim-javascript'
 let g:javascript_plugin_jsdoc = 1
 
@@ -52,7 +54,14 @@ let g:javascript_plugin_jsdoc = 1
 
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-nnoremap <silent> <C-p> :Files<CR>
+
+command! MyFiles call fzf#run(fzf#wrap({
+      \  'source': 'grep -l -R --exclude-dir=node_modules --exclude-dir=.git ""'
+      \}))
+" Or use ripgrep for better performance
+" rg BLANK_PATTERN -uu -l -g !**/node_modules/* -g !**/.git/*
+
+nnoremap <silent> <C-p> :MyFiles<CR>
 nnoremap <silent> <Leader>b :Buffers<CR>
 
 Plug 'itchyny/lightline.vim'
