@@ -1,5 +1,11 @@
 # vim
-vim profile and configuration
+
+---- **_Outdated 2021_** _Use [dotfiles](https://github.com/killzdesu/dotfiles) instead_ ----
+
+-----
+
+
+Vim profile and configuration
 
 Clone to ~ directory after configuration
 
